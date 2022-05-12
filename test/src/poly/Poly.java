@@ -11,6 +11,7 @@ package poly;
 public class Poly{
 	/**
 	 * La liste des coefficients.
+	 * Suffit pour representer un Polynome.
 	 */
     private double[] coef;
 
