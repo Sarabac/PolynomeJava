@@ -72,7 +72,7 @@ public class Poly{
     /**
      * Donne un polynome integral du polynome.
      * @param constante
-     * @return
+     * @return une primitive
      */
     public Poly integrale(double constante) {
     	double[] newCoef = new double[this.coef.length+1];
