@@ -48,6 +48,10 @@ public class Poly{
     	return new Poly(this.coef.clone());
     }
     
+    /**
+     * Donne le polynome derive.
+     * @return
+     */
     public Poly derivee() {
     	double[] coef = this.getCoef();
     	for(int i=1; i<coef.length; i++) {
