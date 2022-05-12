@@ -12,6 +12,7 @@ public class Poly{
 	/**
 	 * La liste des coefficients.
 	 * Suffit pour representer un Polynome.
+	 * test du reset 
 	 */
     private double[] coef;
 
