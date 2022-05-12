@@ -33,6 +33,14 @@ public class Poly{
     }
     
     /**
+     * Donne le rang du polynome.
+     * @return rang en sous forme de int
+     */
+    public int rang() {
+    	return this.coef.length;
+    }
+    
+    /**
      * Copie le double[] des coefficient. Peut etre utilise pour creer un nouveau polynome.
      * @return
      */
