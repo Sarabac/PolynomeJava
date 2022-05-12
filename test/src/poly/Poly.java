@@ -32,6 +32,10 @@ public class Poly{
     	return retour;
     }
     
+    /**
+     * Donne le rang du polynome.
+     * @return rang en sous forme de int
+     */
     public int rang() {
     	return this.coef.length;
     }
