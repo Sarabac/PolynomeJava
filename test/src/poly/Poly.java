@@ -48,6 +48,15 @@ public class Poly{
     	return new Poly(this.coef.clone());
     }
     
+    public Poly derivee() {
+    	double[] coef = this.getCoef();
+    	for(int i=1; i<coef.length; i++) {
+    		coef[i-1] = i*coef[i];
+    	}
+    	coef[coef.length-1] = 0;
+    	return new Poly(coef);
+    }
+    
     /**
      * Additionne deux polynomes.
      * @param autre
