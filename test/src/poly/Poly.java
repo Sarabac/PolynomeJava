@@ -70,6 +70,20 @@ public class Poly{
     }
     
     /**
+     * Donne un polynome integral du polynome.
+     * @param constante
+     * @return
+     */
+    public Poly integrale(double constante) {
+    	double[] newCoef = new double[this.coef.length+1];
+    	newCoef[0] = constante;
+    	for(int i=0; i<this.coef.length; i++) {
+    		newCoef[i+1] = this.coef[i]/i;
+    	}
+    	return new Poly(newCoef);
+    }
+    
+    /**
      * Additionne deux polynomes.
      * @param autre
      * @return
