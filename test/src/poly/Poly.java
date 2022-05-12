@@ -17,7 +17,16 @@ public class Poly{
     private double[] coef;
 
     public Poly(double[] coef){
-        this.coef = coef;
+    	// si le tableau se termine par des 0, ils sont retires
+    	// on utilise i>0 pour garder la possibilitee [0]
+    	int taille = coef.length;
+    	for(int i = coef.length-1; i>0; i--) {
+    		if(coef[i]!=0) {
+    			break;
+    		}
+    		taille = i;
+    	}
+        this.coef = resizeArray(coef, taille);
     }
     /**
      * Evalue le polynome.
@@ -79,8 +88,8 @@ public class Poly{
     public Poly integrale(double constante) {
     	double[] newCoef = new double[this.coef.length+1];
     	newCoef[0] = constante;
-    	for(int i=0; i<this.coef.length; i++) {
-    		newCoef[i+1] = this.coef[i]/i;
+    	for(int i=1; i<newCoef.length; i++) {
+    		newCoef[i] = this.coef[i-1]/i;
     	}
     	return new Poly(newCoef);
     }
