@@ -35,6 +35,7 @@ public class Poly{
     
     /**
      * Donne le rang du polynome.
+     * test autre
      * @return rang en sous forme de int
      */
     public int rang() {
