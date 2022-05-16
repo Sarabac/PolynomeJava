@@ -174,6 +174,4 @@ public class Poly{
         }
         return retour;
     }
-
-
 }
