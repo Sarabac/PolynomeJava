@@ -28,6 +28,19 @@ public class Poly{
     	}
         this.coef = resizeArray(coef, taille);
     }
+    
+    public Poly(double coef) {
+    	this.coef = new double[]{coef};
+    }
+    
+    public Poly(double coef1, double coef2) {
+    	if(coef2==0) {
+    		this.coef = new double[]{coef1};
+    	}else{
+    		this.coef = new double[]{coef1, coef2};
+    	}
+    }
+    
     /**
      * Evalue le polynome.
      * @param x
