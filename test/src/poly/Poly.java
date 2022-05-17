@@ -8,7 +8,7 @@ package poly;
  * @author lboutarfa
  *
  */
-public class Poly{
+public class Poly implements Cloneable{
 	/**
 	 * La liste des coefficients.
 	 * Suffit pour representer un Polynome.
@@ -77,7 +77,7 @@ public class Poly{
      */
     @Override
     public Poly clone() {
-    	return new Poly(this.coef.clone());
+    	return new Poly(this.getCoef());
     }
     
     /**
@@ -90,6 +90,7 @@ public class Poly{
     		coef[i-1] = i*coef[i];
     	}
     	coef[coef.length-1] = 0;
+    	//Le dernier coeficient null sera retire par le constructeur
     	return new Poly(coef);
     }
     
