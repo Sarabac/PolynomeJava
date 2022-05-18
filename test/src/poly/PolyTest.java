@@ -19,6 +19,7 @@ public class PolyTest {
 		for(int i=0; i<coefs.length; i++) {
 			polys[i] = new Poly(coefs[i]);
 		}
+		
 			
 	}
 
